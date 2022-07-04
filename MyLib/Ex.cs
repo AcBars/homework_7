@@ -28,6 +28,16 @@ public class Ex
         }
     }
 
+    public static void PrintArray (double [] result)
+    {
+        for (int i = 0; i < result.Length; i++)
+        {
+
+            Write($"{result[i]} \t ");
+            WriteLine();
+        }
+    }
+
 }
 
 
