@@ -1,10 +1,11 @@
 ﻿namespace MyLib;
 using System;
+using static System.Console;
 public class Ex
 {
     public static int [,] GetArray (int m, int n)
     {
-        int [,] result=new double [m, n];
+        int [,] result=new int [m, n];
         for(int i=0; i<m; i++)
         {
             for(int j=0; j<n; j++)
@@ -14,4 +15,19 @@ public class Ex
         }
     return result;
     }
+
+    public static void PrintArray (int [,] result)
+    {
+        for (int i = 0; i < result.GetLength(0); i++)
+        {
+            for (int j = 0; j < result.GetLength(1); j++)
+            {
+                Write($"{result[i, j]} \t ");
+            }
+            WriteLine();
+        }
+    }
+
 }
+
+
